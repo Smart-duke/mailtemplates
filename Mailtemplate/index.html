@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+    <meta charset="utf-8"> <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+    <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
+    <title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+
+
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i" rel="stylesheet">
+
+    <!-- CSS Reset : BEGIN -->
+<style>
+
+html,
+body {
+    margin: 0 auto !important;
+    padding: 0 !important;
+    height: 100% !important;
+    width: 100% !important;
+    background: #f1f1f1;
+}
+
+/* What it does: Stops email clients resizing small text. */
+* {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* What it does: Centers email on Android 4.4 */
+div[style*="margin: 16px 0"] {
+    margin: 0 !important;
+}
+
+/* What it does: Stops Outlook from adding extra spacing to tables. */
+table,
+td {
+    mso-table-lspace: 0pt !important;
+    mso-table-rspace: 0pt !important;
+}
+
+/* What it does: Fixes webkit padding issue. */
+table {
+    border-spacing: 0 !important;
+    border-collapse: collapse !important;
+    table-layout: fixed !important;
+    margin: 0 auto !important;
+}
+
+/* What it does: Uses a better rendering method when resizing images in IE. */
+img {
+    -ms-interpolation-mode:bicubic;
+}
+
+/* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
+a {
+    text-decoration: none;
+}
+
+/* What it does: A work-around for email clients meddling in triggered links. */
+*[x-apple-data-detectors],  /* iOS */
+.unstyle-auto-detected-links *,
+.aBn {
+    border-bottom: 0 !important;
+    cursor: default !important;
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+}
+
+/* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
+.a6S {
+    display: none !important;
+    opacity: 0.01 !important;
+}
+
+/* What it does: Prevents Gmail from changing the text color in conversation threads. */
+.im {
+    color: inherit !important;
+}
+
+/* If the above doesn't work, add a .g-img class to any image in question. */
+img.g-img + div {
+    display: none !important;
+}
+
+/* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+/* Create one of these media queries for each additional viewport size you'd like to fix */
+
+/* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+@media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+    u ~ div .email-container {
+        min-width: 320px !important;
+    }
+}
+/* iPhone 6, 6S, 7, 8, and X */
+@media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+    u ~ div .email-container {
+        min-width: 375px !important;
+    }
+}
+/* iPhone 6+, 7+, and 8+ */
+@media only screen and (min-device-width: 414px) {
+    u ~ div .email-container {
+        min-width: 414px !important;
+    }
+}
+
+</style>
+
+    <!-- CSS Reset : END -->
+
+    <!-- Progressive Enhancements : BEGIN -->
+<style>
+
+.primary{
+	background: #f3a333;
+}
+
+.bg_white{
+	background: #ffffff;
+}
+.bg_light{
+	background: #fafafa;
+}
+.bg_black{
+	background: #000000;
+}
+.bg_dark{
+	background: rgba(0,0,0,.8);
+}
+.email-section{
+	padding:2.5em;
+}
+
+/*BUTTON*/
+.btn{
+	padding: 10px 15px;
+}
+.btn.btn-primary{
+	border-radius: 30px;
+	background: #f3a333;
+	color: #ffffff;
+}
+
+
+
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Playfair Display', serif;
+	color: #000000;
+	margin-top: 0;
+}
+
+body{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 1.8;
+	color: rgba(0,0,0,.4);
+}
+
+a{
+	color: #f3a333;
+}
+
+table{
+}
+/*LOGO*/
+
+.logo h1{
+	margin: 0;
+}
+.logo h1 a{
+	color: #000;
+	font-size: 20px;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-family: 'Montserrat', sans-serif;
+}
+
+/*HERO*/
+.hero{
+	position: relative;
+}
+.hero img{
+
+}
+.hero .text{
+	color: rgba(255,255,255,.8);
+}
+.hero .text h2{
+	color: #ffffff;
+	font-size: 30px;
+	margin-bottom: 0;
+}
+
+
+/*HEADING SECTION*/
+.heading-section{
+}
+.heading-section h2{
+	color: #000000;
+	font-size: 28px;
+	margin-top: 0;
+	line-height: 1.4;
+}
+.heading-section .subheading{
+	margin-bottom: 20px !important;
+	display: inline-block;
+	font-size: 13px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: rgba(0,0,0,.4);
+	position: relative;
+}
+.heading-section .subheading::after{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -10px;
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: #f3a333;
+	margin: 0 auto;
+}
+
+.learn{
+	border-bottom: 3px solid #f3a333;
+	margin: 0 auto;
+  padding: 0;
+  width: 50%;
+}
+
+.heading-section-white{
+	color: rgba(255,255,255,.8);
+}
+.heading-section-white h2{
+	font-size: 28px;
+	font-family: ;
+	line-height: 1;
+	padding-bottom: 0;
+}
+.heading-section-white h2{
+	color: #ffffff;
+}
+.heading-section-white .subheading{
+	margin-bottom: 0;
+	display: inline-block;
+	font-size: 13px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: rgba(255,255,255,.4);
+}
+
+
+.icon{
+	text-align: center;
+}
+.icon img{
+}
+
+
+/*SERVICES*/
+.text-services{
+	padding: 10px 10px 0; 
+	text-align: center;
+}
+.text-services h3{
+	font-size: 20px;
+}
+
+/*BLOG*/
+.text-services .meta{
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
+/*TESTIMONY*/
+.text-testimony .name{
+	margin: 0;
+}
+.text-testimony .position{
+	color: rgba(0,0,0,.3);
+
+}
+
+
+/*VIDEO*/
+.img{
+	width: 100%;
+	height: auto;
+	position: relative;
+}
+.img .icon{
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin-top: -25px;
+}
+.img .icon a{
+	display: block;
+	width: 60px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -25px;
+}
+
+
+
+/*COUNTER*/
+.counter-text{
+	text-align: center;
+}
+.counter-text .num{
+	display: block;
+	color: #ffffff;
+	font-size: 34px;
+	font-weight: 700;
+}
+.counter-text .name{
+	display: block;
+	color: rgba(255,255,255,.9);
+	font-size: 13px;
+}
+
+
+/*FOOTER*/
+
+.footer{
+	color: rgba(255,255,255,.5);
+
+}
+.footer .heading{
+	color: #ffffff;
+	font-size: 20px;
+}
+.footer ul{
+	margin: 0;
+	padding: 0;
+}
+.footer ul li{
+	list-style: none;
+	margin-bottom: 10px;
+}
+.footer ul li a{
+	color: rgba(255,255,255,1);
+}
+
+
+@media screen and (max-width: 500px) {
+
+	.icon{
+		text-align: left;
+	}
+
+	.text-services{
+		padding-left: 0;
+		padding-right: 20px;
+		text-align: left;
+	}
+
+}
+
+</style>
+
+
+</head>
+
+<body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #222222;">
+	<center style="width: 100%; background-color: #f1f1f1;">
+    <div style="display: none; font-size: 1px;max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
+      &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+    </div>
+    <div style="max-width: 600px; margin: 0 auto;" class="email-container">
+    	<!-- BEGIN BODY -->
+      <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+      	<tr>
+          
+          <td class=" logo" style="padding: 1em 2.5em; text-align: center;background-color:rgb(20, 4, 92) ;">
+            <p style="position: fixed;color: rgb(255, 105, 5);font-size: 25px;font-family: Verdana,sans-serif;font-weight: 800;z-index: 3;">#200,000</p>
+            <h1><a href="https://giit.com.ng/" target="_blank" style="color: white;">GIIT<span style="color: rgb(255, 105, 5);">ARICA</span></a></h1>
+          </td>
+	      </tr><!-- end tr -->
+				<tr>
+          <td valign="middle" class="hero" style="background-image: url(https://api.giitafrica.com/Images/1665499905441twvpob.jpg); background-size: cover; height: 400px; background-color: rgba(20, 4, 92,0.6);background-blend-mode: darken;">
+            <table>
+            	<tr>
+            		<td>
+            			<div class="text" style="padding: 0 3em; text-align: center;">
+            				<h2>Data Science</h2>
+            				<p>Data science is an interdisciplinary field that uses scientific methods, processes, algorithms, and systems to extract knowledge and insights from structured and unstructured data, and apply knowledge and actionable insights from data across a broad range of application domains.</p>
+            				<p><a href="https://giit.com.ng/index.php/course/data-scienceanalytics" class="btn btn-primary">Learn More</a></p>
+            			</div>
+            		</td>
+            	</tr>
+            </table>
+          </td>
+	      </tr><!-- end tr -->
+	      <tr>
+		      <td class="bg_white">
+		        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+		          <tr>
+		            <td class="bg_dark email-section" style="text-align:center;">
+		            	<div class="heading-section heading-section-white">
+		            		<span class="subheading">OverView</span>
+		              	<!-- <h2>Welcome To RestoBar</h2> -->
+		              	<p>It's been said that Data Scientist is the “Sexiest Job of the 21st century”. Why? Because over the past few years, companies have been storing their data. And this being done by each and every company, it has suddenly led to a data explosion. Data has become the most abundant thing today. <br>
+                      But, what will you do with this data? 
+
+                    </p>
+		            	</div>
+		            </td>
+		          </tr><!-- end: tr -->
+		          <tr>
+		            <td class="bg_white email-section">
+		            	<div class="heading-section" style="text-align: center; padding: 0 30px;">
+		            		<span class="subheading">Careers in Data Science</span>
+		              	<!-- <h2>Our Services</h2> -->
+		              	<p>The most common careers in data science include the following roles.</p>
+                    <img src="https://giit.com.ng/uploads/content_image_286daa2a4c5e.png" alt="career courses in Data Science" width="100%">
+		            	</div>
+		            	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+		            		<tr>
+                      <td valign="top" width="50%" style="padding-top: 20px;">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                          <tr>
+                            <td class="icon">
+                              <img src="https://www.bing.com/th?id=OIP.gvT0VZO5HQ7LrLSGS0yVwQAAAA&pid=3.1&cb=&w=300&h=300&p=0" alt="" style="width: 80px; max-width: 600px; height: auto; margin: auto; display: block;">
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="text-services">
+                            	<h3>Data Scientist</h3>
+                             	<p> Determine what the problem is, what questions need answers, and where to find the data.</p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td valign="top" width="50%" style="padding-top: 20px;">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                          <tr>
+                            <td class="icon">
+                              <img src="https://th.bing.com/th/id/OIP.YI5c-tJSRgmwQKZ1YUNQcgHaHa?w=181&h=181&c=7&r=0&o=5&pid=1.7" alt="" style="width: 80px; max-width: 600px; height: auto; margin: auto; display: block;">
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="text-services">
+                            	<h3>ML Scientist</h3>
+                              <p> They develop autonomous AI software and conduct tests to ensure that software generates accurate predictions.</p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+		            	</table>
+		            	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+		            		<tr>
+                      <td valign="top" width="50%" style="padding-top: 20px;">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                          <tr>
+                            <td class="icon">
+                              <img src="https://th.bing.com/th/id/OIP.a6Wwozaf0LssoHKbcZPi8QHaH_?w=204&h=219&c=7&r=0&o=5&pid=1.7" alt="" style="width: 80px; max-width: 600px; height: auto; margin: auto; display: block;">
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="text-services">
+                            	<h3>Data Analyst</h3>
+                             	<p>  Analysts bridge the gap between the data scientists and the business analysts, organizing and analyzing data to answer the questions the organization poses.
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td valign="top" width="50%" style="padding-top: 20px;">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                          <tr>
+                            <td class="icon">
+                              <img src="https://th.bing.com/th/id/OIP.SZvtKB5z7bh_iHswgqjmAQHaHa?w=179&h=180&c=7&r=0&o=5&pid=1.7" alt="" style="width: 80px; max-width: 600px; height: auto; margin: auto; display: block;">
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="text-services">
+                            	<h3>Data Architect</h3>
+                              <p>A data architect is “an individual who is responsible for designing, creating, deploying and managing an organization’s data architecture.</p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+		            	</table>
+		            	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+		            		<tr>
+                      <td valign="top" width="50%" style="padding-top: 20px;">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                          <tr>
+                            <td class="icon">
+                              <img src="https://th.bing.com/th/id/OIP.B6r0FJnB1Bs9g5mjcgNwSwHaHa?w=212&h=212&c=7&r=0&o=5&pid=1.7" alt="" style="width: 80px; max-width: 600px; height: auto; margin: auto; display: block;">
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="text-services">
+                            	<h3>Data Engineer</h3>
+                             	<p>Data engineers focus on developing, deploying, managing, and optimizing the organization’s data infrastructure and data pipelines.</p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td valign="top" width="50%" style="padding-top: 20px;">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                          <tr>
+                            <td class="icon">
+                              <img src="data:image/jpeg;base64,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" alt="" style="width: 80px; max-width: 600px; height: auto; margin: auto; display: block;">
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="text-services">
+                            	<h3>Business Intelligence Specailst</h3>
+                              <p>Far far away, behind the word mountains, far from the countries</p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+		            	</table>
+		            </td>
+		          </tr><!-- end: tr -->
+		          <tr>
+		            <td class="bg_dark email-section" style="color: white;" >
+		            	<table>
+		            		<tr>
+		            			<td class="img">
+		            				<table>
+                          <tr>
+                            <td style="padding-top: 20px;">
+                              <h2 style="text-align: center;" class="learn" >What You will Learn</h2>
+                              <p style="color:#cfcccc ;">In this course, you will learn the following:</p>
+                              <ul style="color:#cfcccc ">
+                                <li>Relationship between Data Analysis vs Data Science</li>
+                                <li>Statistics and Probability</li>
+                                <li>Data Visualization in Data Analysis</li>
+                                <li>Analyzing Data Sets and Database</li>
+                                <li>Python Data Tools</li>
+                              </ul>
+                            </td>
+                          </tr>
+		            					<tr>
+		            						<td>
+		            						</td>
+		            					</tr>
+		            				</table>
+		            			
+		            			</td>
+		            		</tr>
+		            		
+		            	</table>
+		            </td>
+		          </tr><!-- end: tr -->
+		          <tr>
+		            <td class="bg_white email-section">
+		            	<div class="heading-section" style="text-align: center; padding: 0 30px;">
+		            		<span class="subheading">Applicaton Areas Of Data Science</span>
+		              	<ul style="list-style-type: none;">
+                      <li>Health care</li>
+                      <li>Gaming</li>
+                      <li>Image recognition</li>
+                      <li>Recommendation system</li>
+                      <li>Logistics</li>
+                      <li>Fraud detection</li>
+                    </ul>
+		            	</div>
+		            	
+		            </td>
+		          </tr><!-- end: tr -->
+
+		         
+		          <tr>
+			          <td valign="middle" class="counter" style="background-image: url(https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZGF0YSUyMHNjaWVuY2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60); background-size: cover; padding: 4em 0;">
+			            <table>
+			            	<tr>
+			            		<td valign="middle" width="25%">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                          <tr>
+                            <td class="counter-text">
+                            	<span class="num">9457</span>
+                            	<span class="name">Happy Customer</span>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td valign="middle" width="25%">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                          <tr>
+                            <td class="counter-text">
+                            	<span class="num">20</span>
+                            	<span class="name">Years of Experienced</span>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td valign="middle" width="25%">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                          <tr>
+                            <td class="counter-text">
+                            	<span class="num">80</span>
+                            	<span class="name">Branches</span>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td valign="middle" width="25%">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                          <tr>
+                            <td class="counter-text">
+                            	<span class="num">980</span>
+                            	<span class="name">Staff</span>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+			            	</tr>
+			            </table>
+			          </td>
+				      </tr><!-- end tr -->
+				      <tr>
+                <tr>
+                  <td class="bg_dark email-section" style="text-align:center;">
+                    <div class="heading-section heading-section-white">
+                      <span class="subheading">Certifications for Data science</span>
+                      <!-- <h2>Welcome To RestoBar</h2> -->
+                     <ul>
+                      <li>
+                       <p>IBM Data Science Professional Certificate</p>
+                        <p>Requirements: There is no prior experience, knowledge, or training required. <br>
+                          Cost: The course costs $39 per month by subscription on Coursera.</p>
+                      </li>
+                      <li>
+                        <p>Google Cloud’s From Data to Insights with Google Cloud Specialization</p>
+                        <p>Requirements: There is no prior experience, knowledge, or training required. <br>
+                          Cost: The course costs $39 per month by subscription on Coursera.
+
+                        </p>
+                      </li>
+                      <li>
+                        <p>Google’s Data Analytics Professional Certificate</p>
+                        <p>Requirements: There is no prior experience, knowledge, or training required. <br>
+                          Cost: The course costs $39 per month by subscription on Coursera.</p>
+                      </li>
+                      <li>
+                        <p>IBM’s Introduction to Data Science Specialization</p>
+                        <p>Requirements: There is no prior experience, knowledge, or training required. <br>
+                          Cost: The course costs $39 per month by subscription on Coursera.</p>
+                      </li>
+                      <li>
+                        <p>University of Colorado Boulder’s Data Science Graduate Certificate</p>
+                        <p>Requirements: There are no formal prerequisites, but you are recommended to have prior knowledge of basic mathematics (calculus and linear algebra) and computer programming (Python and R). <br>
+                          Cost: The certificate requires 12 credits, each of which is $667 for a total of $8,004.</p>
+                      </li>
+                     </ul>
+                    </div>
+                  </td>
+                </tr>
+		          </tr><!-- end: tr -->
+		          <tr>
+		            <td class="bg_light email-section">
+		            	<div class="heading-section" style="text-align: center; padding: 0 30px;">
+		            		<span class="subheading">Says</span>
+		              	<h2>Testimonial</h2>
+		              	<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+		            	</div>
+		            	<table role="presentation" border="0" cellpadding="10" cellspacing="0" width="100%">
+		            		<tr>
+                      <td valign="top" width="50%" style="padding-top: 20px;">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                          <tr>
+                            <td>
+                              <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80" alt="" style="width: 100px; max-width: 600px; height: auto; margin: auto; margin-bottom: 20px; display: block; border-radius: 50%;">
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="text-testimony" style="text-align: center;">
+                            	<h3 class="name">Samuel Bodegram</h3>
+                            	<span class="position">Businessman</span>
+                             	<p>Far far away, behind the word mountains, far from the countries</p>
+                             	<p><a href="#" class="btn btn-primary">Read more</a></p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td valign="top" width="50%" style="padding-top: 20px;">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                          <tr>
+                            <td>
+                              <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80" alt="" style="width: 100px; max-width: 600px; height: auto; margin: auto; margin-bottom: 20px; display: block; border-radius: 50%;">
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="text-testimony" style="text-align: center;">
+                            	<h3 class="name">Precious Longe</h3>
+                            	<span class="position">Businessman</span>
+                              <p>Far far away, behind the word mountains, far from the countries</p>
+                              <p><a href="#" class="btn btn-primary">Read more</a></p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+		            	</table>
+		            </td>
+		          </tr><!-- end: tr -->
+		          
+		        </table>
+
+		      </td>
+		    </tr><!-- end:tr -->
+      <!-- 1 Column Text + Button : END -->
+      </table>
+      <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+      	<tr>
+          <td valign="middle" class="bg_black footer email-section">
+            <table>
+            	<tr>
+                <td valign="top" width="33.333%" style="padding-top: 20px;">
+                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                    <tr>
+                      <td style="text-align: left; padding-right: 10px;">
+                      	<h3 class="heading">GIIT Africa</h3>
+                      	<p>Raising Global Stars in IT</p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <td valign="top" width="33.333%" style="padding-top: 20px;">
+                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                    <tr>
+                      <td style="text-align: left; padding-left: 5px; padding-right: 5px;">
+                      	<h3 class="heading">Contact Info</h3>
+                      	<ul>
+					                <li><span class="text">3, Obafemi Awolowo Way, Opposite Ikeja LGA, Ikeja, Lagos.</span></li>
+					                <li><span class="text">+2348060515658 || +2348060515686 </span></a></li>
+					              </ul>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <td valign="top" width="33.333%" style="padding-top: 20px;">
+                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                    <tr>
+                      <td style="text-align: left; padding-left: 10px;">
+                      	<h3 class="heading">Socials</h3>
+                      	<ul>
+					                <li><a href="#">Facebook</a></li>
+					                <li><a href="#">Linkedln</a></li>
+					                <li><a href="#">Instagram</a></li>
+					                <li><a href="#">Twitter</a></li>
+					              </ul>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr><!-- end: tr -->
+        <tr>
+        	<td valign="middle" class="bg_black footer email-section">
+        		<table>
+            	<tr>
+                <td valign="top" width="33.333%">
+                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                    <tr>
+                      <td style="text-align: left; padding-right: 10px;">
+                      	<p>&copy; 2022 GIIT AFRICA. ALl rights Reserved</p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <td valign="top" width="33.333%">
+                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                    <tr>
+                      <td style="text-align: right; padding-left: 5px; padding-right: 5px;">
+                      	<p><a href="#" style="color: rgba(255,255,255,.4);">Unsubcribe</a></p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+        	</td>
+        </tr>
+      </table>
+
+    </div>
+  </center>
+</body>
+</html>
